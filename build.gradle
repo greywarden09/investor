@@ -29,7 +29,9 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
+                element = 'CLASS'
                 minimum = 0.95
+                excludes = ['pl.greywarden.investor.entity.*']
             }
         }
     }
