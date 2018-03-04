@@ -20,8 +20,8 @@ public class FundType {
             name = "fund_type_seq",
             strategy = "sequence",
             parameters = {
-                    @Parameter(name = "fund_type_seq", value = "sequence"),
-                    @Parameter(name = "allocation_size", value = "1")
+                    @Parameter(name = "sequence", value = "fund_type_seq"),
+                    @Parameter(name = "increment_size", value = "1")
             })
     @GeneratedValue(generator = "fund_type_seq")
     private Long id;

@@ -18,13 +18,13 @@ public class WayOfInvest {
 
     @Id
     @GenericGenerator(
-            name = "fund_seq",
+            name = "way_of_invest_seq",
             strategy = "sequence",
             parameters = {
-                    @Parameter(name = "fund_seq", value = "sequence"),
-                    @Parameter(name = "allocation_size", value = "1")
+                    @Parameter(name = "sequence", value = "way_of_invest_seq"),
+                    @Parameter(name = "increment_size", value = "1")
             })
-    @GeneratedValue(generator = "fund_seq")
+    @GeneratedValue(generator = "way_of_invest_seq")
     private Long id;
 
     @Column(nullable = false)
