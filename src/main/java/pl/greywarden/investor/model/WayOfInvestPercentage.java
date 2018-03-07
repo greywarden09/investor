@@ -1,4 +1,4 @@
-package pl.greywarden.investor.entity;
+package pl.greywarden.investor.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,27 +13,26 @@ import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
-@Entity
-public class WayOfInvest {
+@Entity(name = "way_of_invest_percentage")
+public class WayOfInvestPercentage {
 
     @Id
     @GenericGenerator(
-            name = "way_of_invest_seq",
-            strategy = "sequence",
+            name = "way_of_invest_percentage_seq",
+            strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
             parameters = {
-                    @Parameter(name = "sequence", value = "way_of_invest_seq"),
+                    @Parameter(name = "sequence", value = "way_of_invest_percentage_seq"),
                     @Parameter(name = "increment_size", value = "1")
             })
-    @GeneratedValue(generator = "way_of_invest_seq")
+    @GeneratedValue(generator = "way_of_invest_percentage_seq")
     private Long id;
 
-    @Column(nullable = false)
-    private String code;
-
-    @ManyToOne
+    @ManyToOne(optional = false)
     private FundType fundType;
 
-    @Column
-    private Integer percentage;
+    @ManyToOne
+    private WayOfInvest wayOfInvest;
 
+    @Column(nullable = false)
+    private Integer percentage;
 }

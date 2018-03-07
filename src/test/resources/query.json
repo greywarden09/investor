@@ -1,0 +1,36 @@
+{
+  "funds": [
+    {
+      "id" : 1,
+      "fundType": "Polskie",
+      "name": "Fundusz Polski 1"
+    },
+    {
+      "id" : 2,
+      "fundType": "Polskie",
+      "name": "Fundusz Polski 2"
+    },
+	{
+      "id" : 3,
+      "fundType": "Zagraniczne",
+      "name": "Fundusz Zagraniczny 1"
+    },
+    {
+      "id" : 4,
+      "fundType": "Zagraniczne",
+      "name": "Fundusz Zagraniczny 2"
+    },
+    {
+      "id" : 5,
+      "fundType": "Zagraniczne",
+      "name": "Fundusz Zagraniczny 3"
+    },
+    {
+      "id" : 6,
+      "fundType": "Pieniężne",
+      "name": "Fundusz Pieniężny 1"
+    }
+  ],
+  "input": 10000,
+  "wayOfInvest": "bezpieczny"
+}

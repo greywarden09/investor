@@ -10,13 +10,15 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import static java.lang.String.format;
 
 @CommonsLog
 @SpringBootApplication
 @ComponentScan(basePackages = "pl.greywarden.investor.*")
-@EntityScan(basePackages = "pl.greywarden.investor.entity")
+@EntityScan(basePackages = "pl.greywarden.investor.model")
+@EnableJpaRepositories(basePackages = "pl.greywarden.investor.repository")
 public class Investor {
 
     @Autowired
